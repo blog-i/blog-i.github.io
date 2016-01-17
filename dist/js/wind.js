@@ -677,7 +677,7 @@ Wind.ready(function() {
 *wind core
 */
 (function(win) {
-	var root = win.GV.JS_ROOT || location.origin + '/js/dev/', //在wind.js加载之前定义GV.JS_ROOT
+	var root = win.GV.JS_ROOT || location.origin + '/js/', //在wind.js加载之前定义GV.JS_ROOT
 		ver = win.GV.JS_VERSION.replace(/(\s)/g, '_') || '9.0',
 		//定义常用JS组件别名，使用别名加载
 		alias = {
