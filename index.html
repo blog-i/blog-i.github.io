@@ -1,11 +1,1817 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>blog</title>
-  </head>
-  <body>
-    <app></app>
-    <script src="dist/build.js"></script>
-  </body>
-</html>
+<!-- saved from url=(0058)http://finalshares.com/bbs-index-run?page=3&order=postdate -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>极分享：高质分享+专业互助=没有难做的软件+没有不得已的加班 </title>
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="generator" content="phpwind v9.0.1 20151228">
+<meta name="description" content="高质分享+专业互助=没有难做的软件+没有不得已的加班；因为分享，所以简单！">
+<meta name="keywords" content="蓝灯,翻墙,finalshare,极分享,安卓,android,JQuery,Bootstrap,Web,JS，Java,PHP,iOS,python,UI,Spring,SpringMVC,Hibernate,Mybatis,MySQL,NoSQL,工具,架构,运维,源代码,支付,IM,多媒体,网络安全,机器学习,云计算,Docker,炫酷工具,定位导航,大数据,浏览器,跨平台,运营,嵌入式,物联网,开发环境,网络">
+<meta property="qc:admins" content="24333472471430125363757">
+<meta name="others" content="10.171.238.221
+10.252.144.147 =&gt; xx.xx.63.92,
+10.171.238.221 =&gt; xx.xx.102.70,
+">
+<link rel="stylesheet" href="dist/style/core.css">
+<link rel="stylesheet" href="dist/style/style.css">
+<link rel="stylesheet" href="dist/style/font-awesome.min.css">
+<!-- <base id="headbase" href="http://finalshares.com/" /> -->
+<style>body{background-color:#252a30;font-size:16px;font-family:'Microsoft Yahei';color:#0070c0;}a{color:#00b050;}.main .thread_posts_list .st{font-size:16px;}div.editor_content{font-size:16px;}.box_wrap{border-color:#252a30;}</style><script src="dist/js/hm.js"></script><script>
+//全局变量 Global Variables
+var GV = {
+	ROOT_DIR      : 'http://finalshares.com',                                               //网站根目录
+	JS_ROOT       : 'http://finalshares.com/res/js/dev/',                                        //js目录
+	JS_VERSION    : '20151228',                                             //js版本号(不能带空格)
+	JS_EXTRES     : 'http://finalshares.com/themes/extres',
+	TOKEN         : '93492652a9614c4f', //token $.ajaxSetup data
+	U_CENTER      : 'http://finalshares.com/space-index-run',                                      //用户空间(参数 : uid)
+	U_AVATAR_DEF  : 'http://finalshares.com/res/images/face/face_middle.jpg',                         //默认小头像
+	U_ID          : parseInt('0'),                                 //uid
+	REGION_CONFIG : '',                                                            //地区数据
+	CREDIT_REWARD_JUDGE : '',                //是否积分奖励，空值:false, 1:true
+	URL           : {
+		LOGIN              : 'http://finalshares.com/u-login-run',                                 //登录地址
+		QUICK_LOGIN        : 'http://finalshares.com/u-login-fast',                                //快速登录
+		IMAGE_RES          : 'http://finalshares.com/res/images',                                    //图片目录
+		CHECK_IMG          : 'http://finalshares.com/u-login-showverify',                          //验证码图片url，global.js引用
+		VARIFY             : 'http://finalshares.com/verify-index-get',                            //验证码html
+		VARIFY_CHECK       : 'http://finalshares.com/verify-index-check',                          //验证码html
+		HEAD_MSG           : {
+			LIST : 'http://finalshares.com/message-notice-minilist'                                //头部消息_列表
+		},
+		USER_CARD          : 'http://finalshares.com/space-card-run',                              //小名片(参数 : uid)
+		LIKE_FORWARDING    : 'http://finalshares.com/bbs-post-doreply',                               //喜欢转发(参数 : fid)
+		REGION             : 'http://finalshares.com/misc-webData-area',                           //地区数据
+		SCHOOL             : 'http://finalshares.com/misc-webData-school',                         //学校数据
+		EMOTIONS           : "http://finalshares.com/emotion-index-run?type=bbs",                  //表情数据
+		CRON_AJAX          : '',                                         //计划任务 后端输出执行
+		FORUM_LIST         : 'http://finalshares.com/bbs-forum-list',                              //版块列表数据
+		CREDIT_REWARD_DATA : 'http://finalshares.com/u-index-showcredit',                          //积分奖励 数据
+		AT_URL             : 'http://finalshares.com/bbs-remind-run',                              //@好友列表接口
+		TOPIC_TYPIC        : 'http://finalshares.com/bbs-forum-topictype'                          //主题分类
+	}
+},
+// 模板全局变量
+	//--------------|--------------------------------------------------------------||
+LorSTN = {
+	theme : {
+		name        : 'viva',
+		duty        : 'site',
+		version     : [1,0,5,0],
+		relase      : 20140208,
+		creator     : 'LoR',
+		storePage   : 'http://bivean.com/product/viva/',
+		enc         : 'utf8',
+		sn          : 'phTzh9UA71GUmsDapkjRQOCoFkfGju1pNiWsKuN68l2nLKZX1bxFHDUWVPiOQopMJ3O/BsApllTMzndmxgdigVyhjmE='
+	},
+	res : {
+		loadingPicA : 'http://finalshares.com/themes/site/biv_viva/images/common/loading_fos.gif'
+	},
+	js : {
+		easing      : 'http://finalshares.com/themes/site/biv_viva/js/jquery.easing.js',
+		vivapack    : 'http://finalshares.com/themes/site/biv_viva/js/viva_package.js',
+		vivado      : 'http://finalshares.com/themes/site/biv_viva/js/viva_do.js'
+	},
+	app : {
+		shareto : {
+			AC : 101,
+			ID : 101,
+			IP : 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)
+		}
+	},
+	ieo:{detector:(function(){var a=window.XMLHttpRequest,b=document.documentMode,c=!!("ActiveXObject" in window),d=!!(!-[1,]),e=!!(function(){"use strict";return this===undefined}()),f = 0,g,h,i,j,k,l;if(!c){return false;}else{g=(!a);h=(!!a&&!b);i=(d&&!!b);k=(!d&&(/*@cc_on!@*/false)&&e);l=(!d&&(/*@cc_on!@*/true));j=(!d&&!e&&!(/*@cc_on!@*/true));};f=l?11:(k?10:(j?9:(i?8:(h?7:(g?6:0)))));return f}()),classer:function(b){if(b&&b<10){var a='';for(var i=6;i<=b;i++){a+=i.toString()};document.documentElement.className+=' ie'+a+' ie'+b}},sizer:function(){var e="GSize3",t=document.body.clientWidth;return e=t>1350?e:t>1170?"GSize2":"GSize1"}}
+};
+
+// 检测IE用的变量
+var dtcIE = LorSTN.ieo.detector; LorSTN.ieo.classer(dtcIE);
+</script>
+<script src="dist/js/wind.js"></script>
+
+
+<link href="dist/style/forum.css" rel="stylesheet"><script type="text/javascript" src="dist/public/js/jquery.js"></script><script type="text/javascript" src="dist/js/global.js"></script><script type="text/javascript" src="dist/public/js/jquery.easing.js"></script><script type="text/javascript" src="dist/js/viva_package.js"></script><script type="text/javascript" src="dist/js/viva_do.js"></script>
+
+<style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+<body>
+<style type="text/css">
+</style><div class="wrap isthreadIndex" id="isthreadIndex">
+<div id="LoR"> <!-- #LoR 开始 -->
+<script type="text/javascript" style="display:none;">
+	(function(){
+		if(dtcIE&&dtcIE<9){
+			var w=(LorSTN.ieo.sizer)(),c=document.body.className;document.body.className=c?(c+" "+w):w;
+		}
+	})();
+</script>
+
+
+<header class="header_wrap">
+	<div id="J_header" class="ga12 clpd1 header cc">
+		<div class="logo">
+			<a href="http://finalshares.com/">
+								<!--后台logo上传-->
+				<img src="dist/img/logo.png" alt="极分享(finalshares.com)">
+							</a>
+		</div>
+		<div class="header_search" id="J_header_search" role="search">
+			<div class="header_search_mask"></div>
+			<form action="http://finalshares.com/search-s-run" method="post">
+				<button type="submit" data-langur="searchBtn" aria-label="搜索"><span>搜索</span></button>
+				<input type="text" id="s" aria-label="搜索关键词" accesskey="s" placeholder="输入关键字搜索" name="keyword" onclick="document.getElementById(&#39;J_nav_wrap&#39;).style.display=&#39;none&#39;;document.getElementById(&#39;s&#39;).style.width=&#39;455px&#39;;" onblur="setTimeout(function() { document.getElementById(&#39;s&#39;).style.width=&#39;130px&#39;; document.getElementById(&#39;J_nav_wrap&#39;).style.display=&#39;block&#39;;}, 200);">				
+			<input type="hidden" name="csrf_token" value="93492652a9614c4f"><input type="hidden" name="csrf_token" value="93492652a9614c4f"></form>
+		</div>
+		<nav class="nav_wrap" id="J_nav_wrap">
+			<div class="nav">
+				<ul>
+						<li class="current"><div class="mask"><span></span><em></em></div><a href="http://finalshares.com/bbs-index-run" title="所有精华">发现</a></li>
+						<li class=""><div class="mask"><span></span><em></em></div><a href="http://finalshares.com/bbs-forumlist-run" title="自由讨论区域">板块墙</a></li>
+					</ul>
+			</div>
+		</nav>
+				<div class="header_user_panel">
+			<div class="header_login">
+		
+	<span class="register">
+		<a rel="nofollow" href="http://finalshares.com/u-register-run" data-langur="g_register">注册</a>
+		<span>/</span>		
+	</span>
+	<span class="login">		
+		<a rel="nofollow" href="http://finalshares.com/u-login-run" data-langur="g_login">登录</a>
+	</span>
+</div>
+
+		</div>
+		
+	</div>
+	</header>
+
+<div class="tac"> </div>
+
+<style>
+	body{background-color:#252a30;font-size:14px;font-family:'Microsoft Yahei';color:#0070c0;}
+	a{color:#00b050;}
+	
+	div.editor_content{font-size:14px;}
+	.box_wrap{border-color:#059777;}
+	
+	.main .thread_posts_list .st{font-size:20px;}
+</style>
+
+<div style="height:309px">
+</div>
+<div class="main_header_ad">
+	<div class="wave">
+	</div>
+	<div class="main_wrap main_container">
+		<div class="banner"></div>
+		<div class="share">
+			<a href="http://finalshares.com/bbs-read-favorite">
+			</a>
+		</div>
+	</div>
+	
+</div>
+	<div class="main_wrap">
+		
+		
+		<div id="cloudwind_forum_top"></div>
+		<div class="main cc">
+			<div class="fl main_menu" id="dropdown">
+				<ul class="">
+										<li class="open">
+						
+						<a href="javascript:void(0);" class="dropdown-toggle">
+							<p style="float:left;width:26px;height:20px;padding-right:10px;margin-top:3px;background:url(dist/img/1.png) no-repeat"></p>
+							<span>视觉设计</span>							
+							<i class="fa fa-angle-right drop-icon"></i>
+						</a>
+						<ul class="submenu" style="display: block; height: 132px;">
+														<li>
+								<a href="http://finalshares.com/tag-%E8%AE%BE%E8%AE%A1%E6%A1%88%E4%BE%8B" target="_blank"> 设计案例</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7" target="_blank"> 设计工具</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E8%AE%BE%E8%AE%A1%E7%B4%A0%E6%9D%90" target="_blank"> 设计素材</a>
+							</li>							
+													</ul>
+					</li>					
+										<li>
+						
+						<a href="javascript:void(0);" class="dropdown-toggle">
+							<p style="float:left;width:26px;height:20px;padding-right:10px;margin-top:3px;background:url(dist/img/2.png) no-repeat"></p>
+							<span>Android开发</span>							
+							<i class="fa fa-angle-right drop-icon"></i>
+						</a>
+						<ul class="submenu" style="display:block; height:0">
+														<li>
+								<a href="http://finalshares.com/tag-%E6%94%AF%E4%BB%98%E6%96%B9%E6%A1%88" target="_blank"> 支付方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E8%B7%A8%E5%B9%B3%E5%8F%B0App%E5%BC%80%E5%8F%91" target="_blank"> 跨平台App开发</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81" target="_blank"> 消息推送</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E6%96%B9%E6%A1%88" target="_blank"> 加密解密方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95%E6%96%B9%E6%A1%88" target="_blank"> 第三方登录方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E7%9F%AD%E4%BF%A1%E9%AA%8C%E8%AF%81%E6%96%B9%E6%A1%88" target="_blank"> 短信验证方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E8%A7%86%E9%A2%91%E7%9B%B4%E6%92%AD%E6%96%B9%E6%A1%88" target="_blank"> 视频直播方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%BC%B9%E5%B9%95%E6%96%B9%E6%A1%88" target="_blank"> 弹幕方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD" target="_blank"> 图片轮播</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%96%B9%E6%A1%88" target="_blank"> 二维码方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-JSON" target="_blank"> JSON</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%96%B9%E6%A1%88" target="_blank"> 图片上传方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%E6%96%B9%E6%A1%88" target="_blank"> 图片压缩方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%BE%E7%89%87%E5%BC%82%E6%AD%A5%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%A1%88" target="_blank"> 图片异步下载方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E6%89%B9%E9%87%8F%E9%80%80%E6%AC%BE%E6%96%B9%E6%A1%88" target="_blank"> 批量退款方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-https%E6%94%AF%E6%8C%81%E6%96%B9%E6%A1%88" target="_blank"> https支持方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%81%8A%E5%A4%A9%E6%96%B9%E6%A1%88" target="_blank"> 机器人聊天方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-http%E5%8F%8Ahttps%E6%B7%B7%E5%90%88%E6%96%B9%E6%A1%88" target="_blank"> http及https混合方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%BE%E7%89%87%E5%89%AA%E5%88%87" target="_blank"> 图片剪切</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%AF%86%E7%A0%81%E5%BC%BA%E5%BA%A6%E6%A0%A1%E9%AA%8C" target="_blank"> 密码强度校验</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E6%96%87%E4%BB%B6%E9%A2%84%E8%A7%88" target="_blank"> 文件预览</a>
+							</li>							
+													</ul>
+					</li>					
+										<li>
+						
+						<a href="javascript:void(0);" class="dropdown-toggle">
+							<p style="float:left;width:26px;height:20px;padding-right:10px;margin-top:3px;background:url(dist/img/3.png) no-repeat"></p>
+							<span>iOS开发</span>							
+							<i class="fa fa-angle-right drop-icon"></i>
+						</a>
+						<ul class="submenu" style="display:block; height:0">
+														<li>
+								<a href="http://finalshares.com/tag-%E6%94%AF%E4%BB%98%E6%96%B9%E6%A1%88" target="_blank"> 支付方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E8%B7%A8%E5%B9%B3%E5%8F%B0App%E5%BC%80%E5%8F%91" target="_blank"> 跨平台App开发</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E6%96%B9%E6%A1%88" target="_blank"> 加密解密方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95%E6%96%B9%E6%A1%88" target="_blank"> 第三方登录方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-IOS%E5%8A%9F%E8%83%BD" target="_blank"> IOS功能</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD" target="_blank"> 图片轮播</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%96%B9%E6%A1%88" target="_blank"> 二维码方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-JSON" target="_blank"> JSON</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%96%B9%E6%A1%88" target="_blank"> 图片上传方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%E6%96%B9%E6%A1%88" target="_blank"> 图片压缩方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%BE%E7%89%87%E5%BC%82%E6%AD%A5%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%A1%88" target="_blank"> 图片异步下载方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E6%89%B9%E9%87%8F%E9%80%80%E6%AC%BE%E6%96%B9%E6%A1%88" target="_blank"> 批量退款方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-https%E6%94%AF%E6%8C%81%E6%96%B9%E6%A1%88" target="_blank"> https支持方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%81%8A%E5%A4%A9%E6%96%B9%E6%A1%88" target="_blank"> 机器人聊天方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-http%E5%8F%8Ahttps%E6%B7%B7%E5%90%88%E6%96%B9%E6%A1%88" target="_blank"> http及https混合方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%BE%E7%89%87%E5%89%AA%E5%88%87" target="_blank"> 图片剪切</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%AF%86%E7%A0%81%E5%BC%BA%E5%BA%A6%E6%A0%A1%E9%AA%8C" target="_blank"> 密码强度校验</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E6%96%87%E4%BB%B6%E9%A2%84%E8%A7%88" target="_blank"> 文件预览</a>
+							</li>							
+													</ul>
+					</li>					
+										<li>
+						
+						<a href="javascript:void(0);" class="dropdown-toggle">
+							<p style="float:left;width:26px;height:20px;padding-right:10px;margin-top:3px;background:url(dist/img/5.png) no-repeat"></p>
+							<span>服务器前端开发</span>							
+							<i class="fa fa-angle-right drop-icon"></i>
+						</a>
+						<ul class="submenu" style="display:block; height:0">
+														<li>
+								<a href="http://finalshares.com/tag-%E6%94%AF%E4%BB%98%E6%96%B9%E6%A1%88" target="_blank"> 支付方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81" target="_blank"> 消息推送</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E6%96%B9%E6%A1%88" target="_blank"> 加密解密方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E6%96%B9%E6%A1%88" target="_blank"> 负载均衡方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%96%B9%E6%A1%88" target="_blank"> 分布式文件系统方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%B9%E6%A1%88" target="_blank"> 分布式数据库方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E8%A7%86%E9%A2%91%E7%9B%B4%E6%92%AD%E6%96%B9%E6%A1%88" target="_blank"> 视频直播方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E6%96%B9%E6%A1%88" target="_blank"> 视频播放方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E9%82%AE%E7%AE%B1%E9%AA%8C%E8%AF%81%E6%96%B9%E6%A1%88" target="_blank"> 邮箱验证方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD" target="_blank"> 图片轮播</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%96%B9%E6%A1%88" target="_blank"> 二维码方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E6%8B%BE%E8%89%B2%E6%9D%BF" target="_blank"> 拾色板</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-JSON" target="_blank"> JSON</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%96%B9%E6%A1%88" target="_blank"> 图片上传方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%E6%96%B9%E6%A1%88" target="_blank"> 图片压缩方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%BE%E7%89%87%E5%BC%82%E6%AD%A5%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%A1%88" target="_blank"> 图片异步下载方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E6%89%B9%E9%87%8F%E9%80%80%E6%AC%BE%E6%96%B9%E6%A1%88" target="_blank"> 批量退款方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-https%E6%94%AF%E6%8C%81%E6%96%B9%E6%A1%88" target="_blank"> https支持方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%81%8A%E5%A4%A9%E6%96%B9%E6%A1%88" target="_blank"> 机器人聊天方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-http%E5%8F%8Ahttps%E6%B7%B7%E5%90%88%E6%96%B9%E6%A1%88" target="_blank"> http及https混合方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%BE%E7%89%87%E5%89%AA%E5%88%87" target="_blank"> 图片剪切</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%AF%86%E7%A0%81%E5%BC%BA%E5%BA%A6%E6%A0%A1%E9%AA%8C" target="_blank"> 密码强度校验</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E4%B8%8B%E8%BD%BD%E6%B8%A0%E9%81%93%E5%8C%BA%E5%88%86" target="_blank"> 下载渠道区分</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E6%96%87%E4%BB%B6%E9%A2%84%E8%A7%88" target="_blank"> 文件预览</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E7%99%BB%E9%99%86%E9%AA%8C%E8%AF%81%E7%A0%81" target="_blank"> 登陆验证码</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-zclip" target="_blank"> zclip</a>
+							</li>							
+													</ul>
+					</li>					
+										<li>
+						
+						<a href="javascript:void(0);" class="dropdown-toggle">
+							<p style="float:left;width:26px;height:20px;padding-right:10px;margin-top:3px;background:url(dist/img/26.png) no-repeat"></p>
+							<span>服务器后端开发</span>							
+							<i class="fa fa-angle-right drop-icon"></i>
+						</a>
+						<ul class="submenu" style="display:block; height:0">
+														<li>
+								<a href="http://finalshares.com/tag-Mybatis" target="_blank"> Mybatis</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-SpringMVC" target="_blank"> SpringMVC</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-Spring" target="_blank"> Spring</a>
+							</li>							
+													</ul>
+					</li>					
+										<li>
+						
+						<a href="javascript:void(0);" class="dropdown-toggle">
+							<p style="float:left;width:26px;height:20px;padding-right:10px;margin-top:3px;background:url(dist/img/6.png) no-repeat"></p>
+							<span>服务器架构</span>							
+							<i class="fa fa-angle-right drop-icon"></i>
+						</a>
+						<ul class="submenu" style="display:block; height:0">
+														<li>
+								<a href="http://finalshares.com/tag-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E6%96%B9%E6%A1%88" target="_blank"> 负载均衡方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%88%86%E5%B8%83%E5%BC%8F%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%96%B9%E6%A1%88" target="_blank"> 分布式文件系统方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%B9%E6%A1%88" target="_blank"> 分布式数据库方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9E%B6%E6%9E%84%E6%A1%88%E4%BE%8B" target="_blank"> 服务器架构案例</a>
+							</li>							
+													</ul>
+					</li>					
+										<li>
+						
+						<a href="javascript:void(0);" class="dropdown-toggle">
+							<p style="float:left;width:26px;height:20px;padding-right:10px;margin-top:3px;background:url(dist/img/4.png) no-repeat"></p>
+							<span>跨平台开发</span>							
+							<i class="fa fa-angle-right drop-icon"></i>
+						</a>
+						<ul class="submenu" style="display:block; height:0">
+														<li>
+								<a href="http://finalshares.com/tag-%E8%B7%A8%E5%B9%B3%E5%8F%B0App%E5%BC%80%E5%8F%91" target="_blank"> 跨平台App开发</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E6%96%B9%E6%A1%88" target="_blank"> 加密解密方案</a>
+							</li>							
+													</ul>
+					</li>					
+										<li>
+						
+						<a href="javascript:void(0);" class="dropdown-toggle">
+							<p style="float:left;width:26px;height:20px;padding-right:10px;margin-top:3px;background:url(dist/img/7.png) no-repeat"></p>
+							<span>技术加油站</span>							
+							<i class="fa fa-angle-right drop-icon"></i>
+						</a>
+						<ul class="submenu" style="display:block; height:0">
+														<li>
+								<a href="http://finalshares.com/tag-iOS%E4%BF%AE%E7%82%BC" target="_blank"> iOS修炼</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-Android%E4%BF%AE%E7%82%BC" target="_blank"> Android修炼</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-Java%E4%BF%AE%E7%82%BC" target="_blank"> Java修炼</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-JavaScript%E4%BF%AE%E7%82%BC" target="_blank"> JavaScript修炼</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-PHP%E4%BF%AE%E7%82%BC" target="_blank"> PHP修炼</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F" target="_blank"> 设计模式</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-Python%E4%BF%AE%E7%82%BC" target="_blank"> Python修炼</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-HTML5%E4%BF%AE%E7%82%BC" target="_blank"> HTML5修炼</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-Node.js%E4%BF%AE%E7%82%BC" target="_blank"> Node.js修炼</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-CSS%E4%BF%AE%E7%82%BC" target="_blank"> CSS修炼</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-C%E4%BF%AE%E7%82%BC" target="_blank"> C修炼</a>
+							</li>							
+													</ul>
+					</li>					
+										<li>
+						
+						<a href="javascript:void(0);" class="dropdown-toggle">
+							<p style="float:left;width:26px;height:20px;padding-right:10px;margin-top:3px;background:url(dist/img/23.png) no-repeat"></p>
+							<span>超级工具箱</span>							
+							<i class="fa fa-angle-right drop-icon"></i>
+						</a>
+						<ul class="submenu" style="display:block; height:0">
+														<li>
+								<a href="http://finalshares.com/tag-%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E5%92%8C%E6%8A%80%E6%9C%AF%E6%96%B9%E6%A1%88" target="_blank"> 功能模块和技术方案</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E6%BA%90%E7%A0%81%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7" target="_blank"> 源码管理工具</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-Docker%E6%8A%80%E6%9C%AF" target="_blank"> Docker技术</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-Linux%E6%8A%80%E5%B7%A7" target="_blank"> Linux技巧</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7" target="_blank"> 自动化运维工具</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E5%B7%A5%E5%85%B7" target="_blank"> 团队协作工具</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-Bug%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7" target="_blank"> Bug管理工具</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E5%BA%94%E7%94%A8%E6%89%98%E7%AE%A1%E5%8F%8A%E5%88%86%E5%8F%91" target="_blank"> 应用托管及分发</a>
+							</li>							
+														<li>
+								<a href="http://finalshares.com/tag-%E8%BD%AF%E4%BB%B6%E5%8C%85%E6%BA%90%E7%A0%81%E4%BF%9D%E6%8A%A4" target="_blank"> 软件包源码保护</a>
+							</li>							
+													</ul>
+					</li>					
+									</ul>
+			</div>
+			<script>
+			var ddctl=document.getElementById("dropdown").getElementsByTagName("a");
+			for(var i=0;i<ddctl.length;i++)
+			{
+				if(ddctl[i].className == "dropdown-toggle")
+				{
+					ddctl[i].onclick =function(){
+						if(this.parentNode.className !="open")
+						{
+							var pliEs = this.parentNode.parentNode.childNodes;
+							for(var i=0;i<pliEs.length;i++){
+								if(pliEs[i].className =="open"){
+									pliEs[i].className="";
+									pliEs[i].getElementsByTagName("ul")[0].style.height ='0';
+								}								
+							}
+							this.parentNode.className="open";
+							//this.parentNode.getElementsByTagName("ul")[0].style.display ='block'; 
+							//this.parentNode.getElementsByTagName("ul")[0].style.height = '200px';
+							var ulE = this.parentNode.getElementsByTagName("ul")[0];
+							var liEsC = ulE.getElementsByTagName("li").length;
+							ulE.style.height = liEsC * 44 + 'px';
+							
+							//$('html, body').animate({scrollTop: $(this).parent().prev().offset().top -88}, 1000);														
+							$('html, body').animate({scrollTop: $(this).parent().parent().children().offset().top -88}, 500);														
+						}
+						else if(this.parentNode.className =="open")
+						{
+							this.parentNode.className="";
+							//this.parentNode.getElementsByTagName("ul")[0].style.display ='none'; 
+							this.parentNode.getElementsByTagName("ul")[0].style.height ='0';
+						}
+					};			
+				}
+			}			
+			</script>
+
+			<div class="gc07 main_body">
+				<div class="cc main_content">
+					
+					 
+					<div class="box_wrap thread_page J_check_wrap">
+						<div class="nav_bar">
+							<div class="nav_left">
+								<ul>
+									<li class=" selected"><a href="http://finalshares.com/bbs-index-run?order=postdate" class=" current" style="background:url(dist/img/postdate.png) no-repeat 6px 4px;">最新</a></li>
+									<li class=""><a href="http://finalshares.com/bbs-index-run?order=hot" class="" style="background:url(dist/img/hot.png) no-repeat 6px 4px;">热门</a></li>
+									<li class=""><a href="http://finalshares.com/bbs-index-run?order=recommend" class="" style="background:url(dist/img/recommend.png) no-repeat 6px 4px;">功能模块&amp;解决方案</a></li>
+								</ul>
+							</div>
+						</div>	
+						<!--公告-->
+												<!--公告结束-->
+												<div class="thread_posts_list">
+							<div width="100%" id="J_posts_list" summary="帖子列表">
+																<div class="cc polist listop">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">
+													<img src="dist/12_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="极分享">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">极分享</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-2226" class="st" style="" title="定制Android设备的神器：认识Xposed">定制Android设备的神器：认识Xposed</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-2226" style="" title="定制Android设备的神器：认识Xposed">
+												
+
+	
+
+
+
+定制你的Android设备：认识Xposed
+
+
+
+
+作为一枚神器，Xposed得到了不少爱折腾的机油的喜爱。我们少数派也写过不少关于Xposed的文章，今天我们就来从头到尾捋一捋「Xp…												</a>
+												<a href="http://finalshares.com/read-2226" style="" title="定制Android设备的神器：认识Xposed">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2015-12-15 20:52</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="4114" href="http://finalshares.com/u-4114">
+														scytfy													</a>
+												<span>2016-01-16 13:39</span>
+												
+																								<a href="http://finalshares.com/thread-23">[Android 工具]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">2</span>
+											<span class="hits">1275</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="10" href="http://finalshares.com/u-10">
+													<img src="dist/10_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="bill">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="10" href="http://finalshares.com/u-10">bill</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-6412" class="st" style="" title="115个Java面试题和答案——终极列表（下）">115个Java面试题和答案——终极列表（下）</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-6412" style="" title="115个Java面试题和答案——终极列表（下）">
+												第一篇讨论了面向对象编程和它的特点，关于Java和它的功能的常见问题，Java的集合类，垃圾收集器，本章主要讨论异常处理，Java小应用程序，Swing，JDBC，远程方法调用(RMI)，Servle…												</a>
+												<a href="http://finalshares.com/read-6412" style="" title="115个Java面试题和答案——终极列表（下）">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2016-01-16 13:34</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="10" href="http://finalshares.com/u-10">
+														bill													</a>
+												<span>2016-01-16 13:34</span>
+												
+																								<a href="http://finalshares.com/thread-43">[Java修炼]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">0</span>
+											<span class="hits">20</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="10" href="http://finalshares.com/u-10">
+													<img src="dist/10_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="bill">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="10" href="http://finalshares.com/u-10">bill</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-6411" class="st" style="" title="115个Java面试题和答案——终极列表（上）">115个Java面试题和答案——终极列表（上）</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-6411" style="" title="115个Java面试题和答案——终极列表（上）">
+												概述本文我们将要讨论Java面试中的各种不同类型的面试题，它们可以让雇主测试应聘者的Java和通用的面向对象编程的能力。下面的章节分为上下两篇，第一篇将要讨论面向对象编程和它的特点，关于Java和它的…												</a>
+												<a href="http://finalshares.com/read-6411" style="" title="115个Java面试题和答案——终极列表（上）">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2016-01-16 13:33</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="10" href="http://finalshares.com/u-10">
+														bill													</a>
+												<span>2016-01-16 13:33</span>
+												
+																								<a href="http://finalshares.com/thread-43">[Java修炼]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">0</span>
+											<span class="hits">25</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">
+													<img src="dist/12_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="极分享">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">极分享</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-291" class="st" style="" title="写好Java代码的30条经验总结">写好Java代码的30条经验总结</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-291" style="" title="写好Java代码的30条经验总结">
+												成为一个优秀的Java程序员，有着良好的代码编写习惯是必不可少的。下面就让我们来看看代码编写的30条建议吧。
+
+(1)类名首字母应该大写。字段、方法以及对象（句柄）的首字母应小写。对于所有标识符，其中…												</a>
+												<a href="http://finalshares.com/read-291" style="" title="写好Java代码的30条经验总结">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2015-09-05 09:11</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="4084" href="http://finalshares.com/u-4084">
+														下一站_幸福													</a>
+												<span>2016-01-16 12:21</span>
+												
+																								<a href="http://finalshares.com/thread-43">[Java修炼]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">1</span>
+											<span class="hits">235</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">
+													<img src="dist/12_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="极分享">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">极分享</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-271" class="st" style="" title="Java专业人员必备工具及优缺点分析">Java专业人员必备工具及优缺点分析</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-271" style="" title="Java专业人员必备工具及优缺点分析">
+												在个人职业生涯中，我曾经为多家公司效力，而这款工具一直伴随在我左右。毫不夸张地讲，Notepad++对我个人而言是最为出色的笔记本替代工具。我一直在利用这款软件编辑xml、脚本或者单纯编写笔记内容。这…												</a>
+												<a href="http://finalshares.com/read-271" style="" title="Java专业人员必备工具及优缺点分析">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2015-09-03 21:31</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="4084" href="http://finalshares.com/u-4084">
+														下一站_幸福													</a>
+												<span>2016-01-16 12:19</span>
+												
+																								<a href="http://finalshares.com/thread-43">[Java修炼]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">1</span>
+											<span class="hits">241</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="80" href="http://finalshares.com/u-80">
+													<img src="dist/80_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="潇潇宇">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="80" href="http://finalshares.com/u-80">潇潇宇</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-6410" class="st" style="" title="Android图片处理SDK">Android图片处理SDK</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-6410" style="" title="Android图片处理SDK">
+												
+
+	
+
+
+图片处理sdk(justforeclipse)
+
+
+
+源码地址：https://github.com/jarlen/PhotoEditDemo
+
+
+
+1，图片编辑(图片添加，文字添加)，实…												</a>
+												<a href="http://finalshares.com/read-6410" style="" title="Android图片处理SDK">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2016-01-16 11:24</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="80" href="http://finalshares.com/u-80">
+														潇潇宇													</a>
+												<span>2016-01-16 11:24</span>
+												
+																								<a href="http://finalshares.com/thread-22">[Android 功能]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">0</span>
+											<span class="hits">35</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="10" href="http://finalshares.com/u-10">
+													<img src="dist/10_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="bill">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="10" href="http://finalshares.com/u-10">bill</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-6409" class="st" style="" title="华为、小米、魅族和锤子们正在联手剿杀中国代工厂">华为、小米、魅族和锤子们正在联手剿杀中国代工厂</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-6409" style="" title="华为、小米、魅族和锤子们正在联手剿杀中国代工厂">
+												“不靠硬件赚钱”的商业逻辑让整个手机产业链不能成为一个利益共同体，无法实现互联网的开放和共赢理念，只是诠释了一将功成万骨枯的强人哲学，代工厂则一直是手机品牌霸凌的牺牲品！
+
+
+
+过去一年中，在密集的手…												</a>
+												<a href="http://finalshares.com/read-6409" style="" title="华为、小米、魅族和锤子们正在联手剿杀中国代工厂">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2016-01-16 11:08</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="10" href="http://finalshares.com/u-10">
+														bill													</a>
+												<span>2016-01-16 11:08</span>
+												
+																								<a href="http://finalshares.com/thread-20">[科技快递]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">0</span>
+											<span class="hits">29</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">
+													<img src="dist/12_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="极分享">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">极分享</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-6408" class="st" style="" title="iOS版CorePPTVC幻灯终结者：超简单、酷且炫、多样式、自定义！">iOS版CorePPTVC幻灯终结者：超简单、酷且炫、多样式、自定义！</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-6408" style="" title="iOS版CorePPTVC幻灯终结者：超简单、酷且炫、多样式、自定义！">
+												
+
+	
+
+
+幻灯终结者：超简单、酷且炫、多样式、自定义！
+
+
+
+源码地址：https://github.com/CharlinFeng/CorePPTVC
+
+
+
+
+
+Charlin出框架的目标：简单、…												</a>
+												<a href="http://finalshares.com/read-6408" style="" title="iOS版CorePPTVC幻灯终结者：超简单、酷且炫、多样式、自定义！">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2016-01-16 10:37</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">
+														极分享													</a>
+												<span>2016-01-16 10:37</span>
+												
+																								<a href="http://finalshares.com/thread-47">[iOS UI]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">0</span>
+											<span class="hits">40</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="10" href="http://finalshares.com/u-10">
+													<img src="dist/10_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="bill">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="10" href="http://finalshares.com/u-10">bill</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-6407" class="st" style="" title="仿新浪微博app">仿新浪微博app</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-6407" style="" title="仿新浪微博app">
+												概述
+模仿新浪微博做的一款app，名为lolita，有发送博文，评论，点赞，私聊功能。
+测试账号：sam123,密码：123456；或账户bill123456@126.com,密码bill123456…												</a>
+												<a href="http://finalshares.com/read-6407" style="" title="仿新浪微博app">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2016-01-16 10:26</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="10" href="http://finalshares.com/u-10">
+														bill													</a>
+												<span>2016-01-16 10:26</span>
+												
+																								<a href="http://finalshares.com/thread-82">[iOS案例]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">0</span>
+											<span class="hits">38</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="297" href="http://finalshares.com/u-297">
+													<img src="dist/297_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="jkxqj">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="297" href="http://finalshares.com/u-297">jkxqj</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-859" class="st" style="" title="新年福利，程序员表白的正确姿势之（一）：改几行代码就变成自己的表白了">新年福利，程序员表白的正确姿势之（一）：改几行代码就变成自己的表白了</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-859" style="" title="新年福利，程序员表白的正确姿势之（一）：改几行代码就变成自己的表白了">
+												这是一个程序员给妹子表白的神器！修改几行代码就变成自己的表白了。
+
+来自程序员的另类浪漫，自己动手修改几行代码就变成酷酷的表白了，为何不支持定制？这个是故意的，我们的包办到此为止，亲自动手才更有诚意啊…												</a>
+												<a href="http://finalshares.com/read-859" style="" title="新年福利，程序员表白的正确姿势之（一）：改几行代码就变成自己的表白了">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2015-11-09 09:11</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="3710" href="http://finalshares.com/u-3710">
+														金刚小仓													</a>
+												<span>2016-01-15 23:16</span>
+												
+																								<a href="http://finalshares.com/thread-85">[后端案例]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">129</span>
+											<span class="hits">12084</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="80" href="http://finalshares.com/u-80">
+													<img src="dist/80_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="潇潇宇">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="80" href="http://finalshares.com/u-80">潇潇宇</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-419" class="st" style="" title="B站建开源工作组：APP想支持炫酷弹幕的看过来">B站建开源工作组：APP想支持炫酷弹幕的看过来</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-419" style="" title="B站建开源工作组：APP想支持炫酷弹幕的看过来">
+												弹幕视频网bilibili（B站）近日在GitHub网站上建立了开源工作组（BOSTF），用以分享与维护自己的开源项目，其中包括DanmakuFlameMaster（燃烧吧！烈焰弹幕使）与ijkpla…												</a>
+												<a href="http://finalshares.com/read-419" style="" title="B站建开源工作组：APP想支持炫酷弹幕的看过来">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2015-09-19 15:06</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="4086" href="http://finalshares.com/u-4086">
+														垓下月白													</a>
+												<span>2016-01-15 22:38</span>
+												
+																								<a href="http://finalshares.com/thread-81">[Android案例]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">4</span>
+											<span class="hits">2931</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">
+													<img src="dist/12_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="极分享">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">极分享</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-2227" class="st" style="" title="超级好用的去视频广告插件：Chrome内核浏览器可用，完全木有30秒的广告了">超级好用的去视频广告插件：Chrome内核浏览器可用，完全木有30秒的广告了</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-2227" style="" title="超级好用的去视频广告插件：Chrome内核浏览器可用，完全木有30秒的广告了">
+												
+
+	
+
+
+
+因为机器内存并不成问题，所以最近一直将Chrome内核的浏览器当做主力浏览器来用，偶尔用用360极速版，偶尔用用猎豹浏览器，同时配合原版Chrome一起用。既然是当做主力浏览器来用，经常…												</a>
+												<a href="http://finalshares.com/read-2227" style="" title="超级好用的去视频广告插件：Chrome内核浏览器可用，完全木有30秒的广告了">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2015-12-15 21:09</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="4086" href="http://finalshares.com/u-4086">
+														垓下月白													</a>
+												<span>2016-01-15 22:38</span>
+												
+																								<a href="http://finalshares.com/thread-99">[浏览器专题]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">4</span>
+											<span class="hits">2216</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">
+													<img src="dist/12_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="极分享">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">极分享</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-1022" class="st" style="" title="Learning Android：Twitter大学校长畅销力作 从头到尾学会完整开发一个微博应用Android开发书籍">Learning Android：Twitter大学校长畅销力作 从头到尾学会完整开发一个微博应用A...</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-1022" style="" title="Learning Android：Twitter大学校长畅销力作 从头到尾学会完整开发一个微博应用Android开发书籍">
+												通过一个完整的项目快速上手Android开发，如果你是新手，非常方便上手，即便你是老手，也能学到软件架构，高效迭代的很多技巧，强烈推荐！！！
+
+
+
+内容简介：
+
+第一章，Android概述，简单介绍A…												</a>
+												<a href="http://finalshares.com/read-1022" style="" title="Learning Android：Twitter大学校长畅销力作 从头到尾学会完整开发一个微博应用Android开发书籍">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2015-11-20 11:11</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="4086" href="http://finalshares.com/u-4086">
+														垓下月白													</a>
+												<span>2016-01-15 22:37</span>
+												
+																								<a href="http://finalshares.com/thread-42">[Android修炼]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">12</span>
+											<span class="hits">1481</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">
+													<img src="dist/12_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="极分享">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">极分享</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-6402" class="st" style="" title="AnyVersion - 实现Android App版本自动更新">AnyVersion - 实现Android App版本自动更新</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-6402" style="" title="AnyVersion - 实现Android App版本自动更新">
+												
+
+	
+
+
+
+AnyVersion-实现AndroidApp版本自动更新
+
+
+
+AndroidApp版本更新提示库-AnAndroidAPPnewversionupdatelibrary.
+
+
+	An…												</a>
+												<a href="http://finalshares.com/read-6402" style="" title="AnyVersion - 实现Android App版本自动更新">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2016-01-15 22:04</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">
+														极分享													</a>
+												<span>2016-01-15 22:04</span>
+												
+																								<a href="http://finalshares.com/thread-22">[Android 功能]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">0</span>
+											<span class="hits">181</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">
+													<img src="dist/12_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="极分享">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">极分享</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-6397" class="st" style="" title="Tinyhttp一个基于回调机制的多线程异步Http连接库">Tinyhttp一个基于回调机制的多线程异步Http连接库</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-6397" style="" title="Tinyhttp一个基于回调机制的多线程异步Http连接库">
+												
+
+	
+
+
+AsyncHttpConnection
+
+
+
+
+	amulti-threadcallback-basedasynchttpconnectionlibrary.itcanbeuseonand…												</a>
+												<a href="http://finalshares.com/read-6397" style="" title="Tinyhttp一个基于回调机制的多线程异步Http连接库">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2016-01-15 21:39</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">
+														极分享													</a>
+												<span>2016-01-15 21:39</span>
+												
+																								<a href="http://finalshares.com/thread-22">[Android 功能]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">0</span>
+											<span class="hits">29</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="16" href="http://finalshares.com/u-16">
+													<img src="dist/16_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="淡水鱼">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="16" href="http://finalshares.com/u-16">淡水鱼</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-512" class="st" style="" title="基于ZXing Android实现的二维码扫描支持库">基于ZXing Android实现的二维码扫描支持库</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-512" style="" title="基于ZXing Android实现的二维码扫描支持库">
+												
+ZXingMiniZXing开源库的精简版
+
+基于ZXingAndroid实现的二维码扫描支持库。包括生成二维码图片和相机扫描二维码图片即时解码两部分功能。
+
+
+本项目作以下优化：
+
+已创建QRCo…												</a>
+												<a href="http://finalshares.com/read-512" style="" title="基于ZXing Android实现的二维码扫描支持库">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2015-10-08 10:16</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">
+														极分享													</a>
+												<span>2016-01-15 21:36</span>
+												
+																								<a href="http://finalshares.com/thread-22">[Android 功能]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">1</span>
+											<span class="hits">438</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="10" href="http://finalshares.com/u-10">
+													<img src="dist/10_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="bill">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="10" href="http://finalshares.com/u-10">bill</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-6392" class="st" style="" title="仿陌陌客户端">仿陌陌客户端</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-6392" style="" title="仿陌陌客户端">
+												软件功能：模仿陌陌客户端，功能很相似，注册、登陆、上传照片、浏览照片、浏览查找附近会员、关注、取消关注、聊天、语音和文字聊天，还有拼车和搭车的功能，支持微博分享和查找好友。
+后台是php＋mysql，…												</a>
+												<a href="http://finalshares.com/read-6392" style="" title="仿陌陌客户端">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2016-01-15 21:23</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="10" href="http://finalshares.com/u-10">
+														bill													</a>
+												<span>2016-01-15 21:23</span>
+												
+																								<a href="http://finalshares.com/thread-82">[iOS案例]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">0</span>
+											<span class="hits">35</span>
+										</div>
+									</div>
+																	<div class="cc polist">
+																		<div class="author">
+											<p class="photo">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">
+													<img src="dist/12_small.jpg" onerror="this.onerror=null;this.src=&#39;http://finalshares.com/res/images/face/face_small.jpg&#39;" width="50" height="50" alt="极分享">
+												</a>
+											</p>
+											<p class="name">
+												<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">极分享</a>
+											</p>
+										</div>
+										<div class="subject">
+											<p class="title">
+												
+												<!---->
+																								<a href="http://finalshares.com/read-6363" class="st" style="" title="编程赚钱的7个方法">编程赚钱的7个方法</a>
+																							</p>
+											<p class="content">
+												<a href="http://finalshares.com/read-6363" style="" title="编程赚钱的7个方法">
+												
+
+	
+
+
+编程赚钱的7个方法
+
+
+
+几个星期前，当我收到一个自称Someone712的人发给我的一条消息时，我决定要写一篇如何用编程赚钱的博客文章。Someone712：
+
+
+我对电子、物理和编程很…												</a>
+												<a href="http://finalshares.com/read-6363" style="" title="编程赚钱的7个方法">
+												[详细]
+												</a>
+												
+											</p>
+											<p class="info">
+											
+												<span>2016-01-15 19:03</span>
+												
+												<span class="isLastreplier" data-langur="bpo_lastreplier">最后回应</span>: 
+													<a class="J_user_card_show" data-uid="12" href="http://finalshares.com/u-12">
+														极分享													</a>
+												<span>2016-01-15 19:03</span>
+												
+																								<a href="http://finalshares.com/thread-91">[创业故事]</a>
+												
+											</p>
+										</div>
+										<div class="counter">
+											<span class="replies">0</span>
+											<span class="hits">61</span>
+										</div>
+									</div>
+								
+								</div>
+							</div>
+
+							<div class="pages_wrap cc">
+								<div class="J_page_wrap cc" data-key="true">
+									<div class="pages">
+	<a href="http://finalshares.com/bbs-index-run?page=2&order=postdate" class="pages_pre J_pages_pre"><span class="arrow">&lt;</span><span data-langur="g_pagePre">上一页</span></a>
+		<a href="http://finalshares.com/bbs-index-run?page=1&order=postdate">1</a>
+		<a href="http://finalshares.com/bbs-index-run?page=2&order=postdate">2</a>
+		<strong>3</strong>
+	<a href="http://finalshares.com/bbs-index-run?page=4&order=postdate">4</a>
+		<a href="http://finalshares.com/bbs-index-run?page=5&order=postdate">5</a>
+		<a href="http://finalshares.com/bbs-index-run?page=6&order=postdate">6</a>
+		<a href="http://finalshares.com/bbs-index-run?page=106&order=postdate">...106</a>
+		<a href="http://finalshares.com/bbs-index-run?page=4&order=postdate" class="pages_next J_pages_next"><span data-langur="g_pageNest">下一页</span><span class="arrow">&gt;</span></a>
+</div>
+								</div>
+							</div>
+													</div>
+						
+						
+						 
+						
+					</div>
+				</div>
+			
+				
+				<div class="fr main_right">
+					<div class="top">
+						<a href="http://finalshares.com/bbs-top-blogs"></a>
+					</div>
+					<div class="tag">
+						<a href="http://finalshares.com/tag-index-run"></a>
+					</div>
+					<div class="sina">
+						<a href="http://weibo.com/5653549461/profile?topnav=1&wvr=6&is_all=1" target="_blank"></a>
+					</div>
+					<div class="weixin">
+						<div href="http://finalshares.com/bbs-read-favorite" onmouseover="document.getElementById(&#39;weixin_qrcode&#39;).style.display=&#39;block&#39;;" onmouseout="document.getElementById(&#39;weixin_qrcode&#39;).style.display=&#39;none&#39;;"></div>						
+					</div>
+					<div class="weixin_qrcode" id="weixin_qrcode">					
+						<span></span>
+					</div>						
+				</div>
+			</div>
+			
+			<div id="cloudwind_forum_bottom"></div>
+		
+			<pw-tpl id="indexHead_segment#">
+			
+		</pw-tpl></div>
+
+		<div class="wrap isthreadIndex" style="background:#252a30;">
+			<div class="main_wrap" style="padding:0;">
+						
+					<div class="clpd1 cc main_content" style="padding:0;margin-bottom:15px;">
+						<div>
+								<div class="links_list">
+				<dl>
+			<dt><a href="http://weixinbrothers.com/" target="_blank"><img src="dist/img/weixin.png" alt="唯信兄弟科技" title="唯信兄弟科技"></a></dt>
+			
+		</dl>
+				<dl>
+			<dt><a href="http://www.kiford.com/" target="_blank"><img src="dist/img/wenjin.png" alt="问津" title="问津"></a></dt>
+			
+		</dl>
+				<dl>
+			<dt><a href="http://www.easemob.com/?fr=finalshares" target="_blank"><img src="dist/img/huanxin.png" alt="环信" title="环信"></a></dt>
+			
+		</dl>
+				<dl>
+			<dt><a href="http://www.rongcloud.cn/" target="_blank"><img src="dist/img/rongcloud.png" alt="融云" title="融云"></a></dt>
+			
+		</dl>
+				<dl>
+			<dt><a href="http://www.jisuanke.com/" target="_blank"><img src="dist/img/jisuanke.png" alt="计蒜客" title="计蒜客"></a></dt>
+			
+		</dl>
+				<dl>
+			<dt><a href="https://mart.coding.net/" target="_blank"><img src="dist/img/martCoding.png" alt="码市" title="码市"></a></dt>
+			
+		</dl>
+				<dl>
+			<dt><a href="http://sendcloud.sohu.com/" target="_blank"><img src="dist/img/sendcloud.png" alt="sendcloud" title="sendcloud"></a></dt>
+			
+		</dl>
+				<dl>
+			<dt><a href="https://beecloud.cn/" target="_blank"><img src="dist/img/beecloud.png" alt="beecloud" title="beecloud"></a></dt>
+			
+		</dl>
+				<dl>
+			<dt><a href="http://apistore.baidu.com/" target="_blank"><img src="dist/img/baiduapi.png" alt="百度APIStore" title="百度APIStore"></a></dt>
+			
+		</dl>
+			</div>
+						
+						</div>
+					</div>			
+			
+			</div>
+		</div>
+
+		<!--.main-wrap,#main End-->
+<!--
+<div class="tac">
+ <br />
+ 
+</div>
+-->
+</div>  <!-- #LoR 结束 -->
+
+<div class="footer_wrap">
+	<div class="footer">
+		
+		<div class="cc footer_stamp">
+			<div class="gc08 cc">
+				<div class=" center">
+											&nbsp;&nbsp;<a href="http://finalshares.com/read-435" style="color:#ffffff;">社区助手</a>						&nbsp;&nbsp;<a href="http://weixinbrothers.com/" style="color:#ffffff;">公司官网</a>						&nbsp;&nbsp;<a href="http://finalshares.com/read-432" style="color:#ffffff;">极分享与未来只差一个你</a>						&nbsp;&nbsp;<a href="http://finalshares.com/read-434" style="color:#ffffff;">内容许可</a>				</div>
+			</div>
+		</div>
+		<div class="cc footer_stamp">
+			<div class="gc08 cc">
+				<div class="center"> <a href="http://finalshares.com/" target="_blank" rel="nofollow">© Copyright 2015,极分享(finalshares.com)</a>
+					<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">&nbsp;&nbsp;鄂ICP备15010461号</a>
+				</div>
+				<div class="fl"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256777902'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256777902' type='text/javascript'%3E%3C/script%3E"));
+</script><span id="cnzz_stat_icon_1256777902"><a href="http://www.cnzz.com/stat/website.php?web_id=1256777902" target="_blank" title="站长统计">站长统计</a></span><script src="dist/z_stat.php" type="text/javascript"></script><script src="dist/core.php" charset="utf-8" type="text/javascript"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e58d4c461a6c50a13de5ee995bf40099";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+			</div>
+			<div class="gc04 fr">Powered by <a href="http://www.phpwind.net/" target="_blank" rel="nofollow">Phpwind 9.0.1</a>Created by <a href="http://bivean.com/">weixinbrothers</a></div>
+		</div>
+	</div>
+	 
+	 
+	 
+	<div id="cloudwind_common_bottom"></div>
+	</div>
+
+<!--返回顶部-->
+<a href="http://finalshares.com/bbs-index-run?page=3&order=postdate#" rel="nofollow" role="button" id="back_top" tabindex="-1" style="display: none;">返回顶部</a>
+
+<div id="lorCloak"></div>
+
+</div>
+
+<script>
+// , LorSTN.js.viva
+var FID = '';
+Wind.use('jquery', 'global', function(){
+	(function (factory) {
+	if (typeof define === 'function' && define.amd) {
+		// AMD
+		define(['jquery'], factory);
+	} else if (typeof exports === 'object') {
+		// CommonJS
+		factory(require('jquery'));
+	} else {
+		// Browser globals
+		factory(jQuery);
+	}
+}(function ($) {
+
+	var pluses = /\+/g;
+
+	function encode(s) {
+		return config.raw ? s : encodeURIComponent(s);
+	}
+
+	function decode(s) {
+		return config.raw ? s : decodeURIComponent(s);
+	}
+
+	function stringifyCookieValue(value) {
+		return encode(config.json ? JSON.stringify(value) : String(value));
+	}
+
+	function parseCookieValue(s) {
+		if (s.indexOf('"') === 0) {
+			// This is a quoted cookie as according to RFC2068, unescape...
+			s = s.slice(1, -1).replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+		}
+
+		try {
+			// Replace server-side written pluses with spaces.
+			// If we can't decode the cookie, ignore it, it's unusable.
+			// If we can't parse the cookie, ignore it, it's unusable.
+			s = decodeURIComponent(s.replace(pluses, ' '));
+			return config.json ? JSON.parse(s) : s;
+		} catch(e) {}
+	}
+
+	function read(s, converter) {
+		var value = config.raw ? s : parseCookieValue(s);
+		return $.isFunction(converter) ? converter(value) : value;
+	}
+
+	var config = $.cookie = function (key, value, options) {
+
+		// Write
+
+		if (value !== undefined && !$.isFunction(value)) {
+			options = $.extend({}, config.defaults, options);
+
+			if (typeof options.expires === 'number') {
+				var days = options.expires, t = options.expires = new Date();
+				t.setTime(+t + days * 864e+5);
+			}
+
+			return (document.cookie = [
+				encode(key), '=', stringifyCookieValue(value),
+				options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+				options.path    ? '; path=' + options.path : '',
+				options.domain  ? '; domain=' + options.domain : '',
+				options.secure  ? '; secure' : ''
+			].join(''));
+		}
+
+		// Read
+
+		var result = key ? undefined : {};
+
+		// To prevent the for loop in the first place assign an empty array
+		// in case there are no cookies at all. Also prevents odd result when
+		// calling $.cookie().
+		var cookies = document.cookie ? document.cookie.split('; ') : [];
+
+		for (var i = 0, l = cookies.length; i < l; i++) {
+			var parts = cookies[i].split('=');
+			var name = decode(parts.shift());
+			var cookie = parts.join('=');
+
+			if (key && key === name) {
+				// If second argument (value) is a function it's a converter...
+				result = read(cookie, value);
+				break;
+			}
+
+			// Prevent storing a cookie that we couldn't decode.
+			if (!key && (cookie = read(cookie)) !== undefined) {
+				result[name] = cookie;
+			}
+		}
+
+		return result;
+	};
+
+	config.defaults = {};
+
+	$.removeCookie = function (key, options) {
+		if ($.cookie(key) === undefined) {
+			return false;
+		}
+
+		// Must not alter options, thus extending a fresh object...
+		$.cookie(key, '', $.extend({}, options, { expires: -1 }));
+		return !$.cookie(key);
+	};
+
+}));
+	$(document).ready(function(){
+
+	if($.cookie("finalshares_intro")){
+		
+	}
+		else{
+		var intro_wrap = $('.int-wrap');
+		var del = $('.del');
+		var timer;
+		$.cookie('finalshares_intro', 'the_value', { expires: 7 }); 
+		//var a = $.cookie('the_cookie');
+
+		//alert(a);
+		timer = setTimeout(function(){
+			intro_wrap.addClass('is-visible');
+		},3000);
+
+		del.on('click',function(event){
+			intro_wrap.removeClass('is-visible');
+		});
+		$(document).keyup(function(event){
+			if(event.which=='27'){
+				intro_wrap.removeClass('is-visible');
+			}
+		});
+		
+	}
+
+})
+
+	if(GV.U_ID) {
+		Wind.js(GV.JS_ROOT +'pages/bbs/threadManage.js?v=' + GV.JS_VERSION);
+	}
+});
+</script>
+
+
+
+</body></html>
