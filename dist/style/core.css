@@ -1827,7 +1827,7 @@ div.pop_show_mini{
 	height:20px;
 	width:34px;
 	display:inline-block;
-	background:url(../../../../../res/images/transparent.png);
+	background:url(../../../res/images/transparent.png);
 }
 .color_pick.color_big{
 	background-image:none;
@@ -3562,66 +3562,66 @@ ul.at_user_list{
 *********************************************************************/
 @font-face {  /* Open Sans */
     font-family: 'OpenSans';
-    src: url('../../fonts/Open-Sans-Light.eot');
-    src: url('../../fonts/Open-Sans-Light.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/Open-Sans-Light.woff2') format('woff2'),
-         url('../../fonts/Open-Sans-Light.woff') format('woff'),
-         url('../../fonts/Open-Sans-Light.ttf') format('truetype');
+    src: url('../fonts/Open-Sans-Light.eot');
+    src: url('../fonts/Open-Sans-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Open-Sans-Light.woff2') format('woff2'),
+         url('../fonts/Open-Sans-Light.woff') format('woff'),
+         url('../fonts/Open-Sans-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 	text-rendering: optimizeLegibility;
 }
 @font-face {  /* Open Sans */
     font-family: 'OpenSans';
-    src: url('../../fonts/Open-Sans-Light-Italic.eot');
-    src: url('../../fonts/Open-Sans-Light-Italic.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/Open-Sans-Light-Italic.woff2') format('woff2'),
-         url('../../fonts/Open-Sans-Light-Italic.woff') format('woff'),
-         url('../../fonts/Open-Sans-Light-Italic.ttf') format('truetype');
+    src: url('../fonts/Open-Sans-Light-Italic.eot');
+    src: url('../fonts/Open-Sans-Light-Italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Open-Sans-Light-Italic.woff2') format('woff2'),
+         url('../fonts/Open-Sans-Light-Italic.woff') format('woff'),
+         url('../fonts/Open-Sans-Light-Italic.ttf') format('truetype');
     font-weight: 300;
     font-style: italic;
 	text-rendering: optimizeLegibility;
 }
 @font-face {  /* Open Sans */
     font-family: 'OpenSans';
-    src: url('../../fonts/Open-Sans-Regular.eot');
-    src: url('../../fonts/Open-Sans-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/Open-Sans-Regular.woff2') format('woff2'),
-         url('../../fonts/Open-Sans-Regular.woff') format('woff'),
-         url('../../fonts/Open-Sans-Regular.ttf') format('truetype');
+    src: url('../fonts/Open-Sans-Regular.eot');
+    src: url('../fonts/Open-Sans-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Open-Sans-Regular.woff2') format('woff2'),
+         url('../fonts/Open-Sans-Regular.woff') format('woff'),
+         url('../fonts/Open-Sans-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 	text-rendering: optimizeLegibility;
 }
 @font-face {  /* Open Sans */
     font-family: 'OpenSans';
-    src: url('../../fonts/Open-Sans-Regular-Italic.eot');
-    src: url('../../fonts/Open-Sans-Regular-Italic.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/Open-Sans-Regular-Italic.woff2') format('woff2'),
-         url('../../fonts/Open-Sans-Regular-Italic.woff') format('woff'),
-         url('../../fonts/Open-Sans-Regular-Italic.ttf') format('truetype');
+    src: url('../fonts/Open-Sans-Regular-Italic.eot');
+    src: url('../fonts/Open-Sans-Regular-Italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Open-Sans-Regular-Italic.woff2') format('woff2'),
+         url('../fonts/Open-Sans-Regular-Italic.woff') format('woff'),
+         url('../fonts/Open-Sans-Regular-Italic.ttf') format('truetype');
     font-weight: 400;
     font-style: italic;
 	text-rendering: optimizeLegibility;
 }
 @font-face { /* Exo Condensed */
     font-family: 'ExoCon';
-    src: url('../../fonts/Exo2-Condensed-Light.eot');
-    src: url('../../fonts/Exo2-Condensed-Light.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/Exo2-Condensed-Light.woff2') format('woff2'),
-         url('../../fonts/Exo2-Condensed-Light.woff') format('woff'),
-         url('../../fonts/Exo2-Condensed-Light.ttf') format('truetype');
+    src: url('../fonts/Exo2-Condensed-Light.eot');
+    src: url('../fonts/Exo2-Condensed-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Exo2-Condensed-Light.woff2') format('woff2'),
+         url('../fonts/Exo2-Condensed-Light.woff') format('woff'),
+         url('../fonts/Exo2-Condensed-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 	text-rendering: optimizeLegibility;
 }
 @font-face { /* Exo Condensed */
     font-family: 'ExoCon';
-    src: url('../../fonts/Exo2-Condensed-Regular.eot');
-    src: url('../../fonts/Exo2-Condensed-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/Exo2-Condensed-Regular.woff2') format('woff2'),
-         url('../../fonts/Exo2-Condensed-Regular.woff') format('woff'),
-         url('../../fonts/Exo2-Condensed-Regular.ttf') format('truetype');
+    src: url('../fonts/Exo2-Condensed-Regular.eot');
+    src: url('../fonts/Exo2-Condensed-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Exo2-Condensed-Regular.woff2') format('woff2'),
+         url('../fonts/Exo2-Condensed-Regular.woff') format('woff'),
+         url('../fonts/Exo2-Condensed-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 	text-rendering: optimizeLegibility;
